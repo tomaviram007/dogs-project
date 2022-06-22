@@ -1,0 +1,93 @@
+/* trainer card */
+.containerTrainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.containerTrainer .card {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  background: #626161a1;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.containerTrainer .card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #9bdc28;
+  clip-path: circle(165px at 90% 20%);
+  transition: 0.5s ease-in-out;
+}
+.containerTrainer .card:hover:before {
+  clip-path: circle(300px at 80% -20%);
+}
+
+.containerTrainer .card .imgBx {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-70%);
+  z-index: 1000;
+  width: 100%;
+  height: 220px;
+  transition: 0.5s;
+}
+.containerTrainer .card:hover .imgBx {
+  top: 10%;
+  transform: translateY(0%);
+}
+.containerTrainer .card .imgBx img {
+  position: absolute;
+  top: 40%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  width: 190px;
+  border-radius: 15px;
+}
+.containerTrainer .card .contentBx {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 8px;
+  text-align: center;
+  transition: 1s;
+  z-index: 10;
+}
+.containerTrainer .card:hover .contentBx {
+  height: 210px;
+}
+.containerTrainer .card .contentBx h2 {
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  margin: 0;
+}
+.containerTrainer .card .contentBx .info,
+.containerTrainer .card .contentBx .color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 60px;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+  /* background-color: rgb(172, 172, 154); */
+}
+.containerTrainer .card:hover .contentBx .info {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+.containerTrainer .card:hover .contentBx .color {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
